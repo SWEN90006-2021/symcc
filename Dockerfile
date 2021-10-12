@@ -32,10 +32,6 @@ RUN apt-get update \
         python2 \
         python3-pip \
         zlib1g-dev \
-        nano \
-        wget \
-        vim \
-        xxd
     && rm -rf /var/lib/apt/lists/*
 RUN pip3 install lit
 
@@ -119,6 +115,10 @@ RUN apt-get update \
         libllvm10 \
         zlib1g \
         sudo \
+        wget \
+        nano \
+        vim \
+        xxd \
     && rm -rf /var/lib/apt/lists/* \
     && useradd -m -s /bin/bash ubuntu \
     && echo 'ubuntu ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/ubuntu
